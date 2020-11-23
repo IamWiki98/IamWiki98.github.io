@@ -1,0 +1,142 @@
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow: scroll;
+	overflow-x: hidden;
+	font-family: Poppins;
+	background-color: #560e18;
+	//background-color:#d50000;
+	background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(0,0,0,0.6),
+      rgba(0,0,0,0.6) 100px,
+      transparent 0px,
+      transparent 200px
+    ),
+    repeating-linear-gradient(
+      -45deg,
+      rgba(0,0,0,0.5),
+      rgba(0,0,0,0.5) 100px,
+      transparent 0px,
+      transparent 200px
+    );
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	color: #ffffff;
+}
+
+.navbar {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	top: 0;
+	align-items: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	background-color: #2e0f0e;
+	width: 100%;
+	z-index: 999;
+	box-shadow: 0 0 15px 0 #000;
+}
+
+.nav {
+	display: flex;
+	justify-content: right;
+	list-style: none;
+	margin-right: 15%;
+}
+
+.logo,
+.nav a {
+	margin: 0;
+	color: #dcafad;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav a {
+	padding: 20px 20px;
+	font-weight: bold;
+}
+
+.logo {
+	flex: 1 1 auto;
+	margin-left: 10%;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-weight: bold;
+	font-size: 35px;
+}
+
+.nav a:hover {
+	color: #ffffff;
+	font-weight: normal;
+}
+
+.banner-area {
+	position: relative;
+	display: flex;
+	margin: 0 10% 0 10%;
+	background-color: #2e0f0e;
+	height: 80vh;
+}
+
+.profile-area {
+	float: right;
+	width: 70%;
+	height: 100%;
+}
+
+.banner-area img {
+	position: absolute;
+	width: 600px;
+	bottom: 0;
+	z-index: 1;
+	background-blend-mode: color;
+}
+
+.about-area, .portfolio-area, .contact-area {
+	position: relative;
+	margin: 0 10% 0 10%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	//text-align: left;
+	flex-wrap: wrap;
+	flex-direction: row;
+	height: 700px;
+	background-color: #421014;
+}
+
+.about-area, contact-area { background-color: #421014; }
+.portfolio-area { background-color: #2e0f0e; }
+
+.portfolio-area a {
+	-webkit-appearance: button;
+	position: absolute;
+	align-items: center;
+	bottom: 100px;
+	outline: 3px solid #dcafad;
+	color: #dcafad;
+	padding: 10px;
+	font-size: 30px;
+	text-decoration: none;
+	transition: background-color 1s, color 0.5s;
+}
+
+.portfolio-area a:hover {
+	background-color: #dcafad;
+	color: #2e0f0e;
+}
+
+.text-part {
+	width: 65%;
+	height: 80%;
+	color: #eed6d5;
+}
