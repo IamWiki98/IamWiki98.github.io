@@ -9,7 +9,7 @@ body {
 	overflow: scroll;
 	overflow-x: hidden;
 	font-family: Poppins;
-	color: #ffffff;
+	color: #66fcf1;
 }
 
 .navbar {
@@ -83,7 +83,7 @@ body {
 
 .banner-area img {
 	position: absolute;
-	width: 33%;
+	max-width: 33%;
 	margin: auto;
 	top: 0;
 	bottom: 0;
