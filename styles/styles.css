@@ -117,6 +117,7 @@ body {
 	top: 0;
 	bottom: 0;
 	transform: translateY(-10%);
+	filter: brightness(125%);
 }
 
 .banner-red {
