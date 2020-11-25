@@ -110,6 +110,22 @@ body {
 	animation-duration: 1.7s;
 }
 
+.banner-img-desc {
+	position: absolute;
+	display: inline-block;
+	margin-right: 50px;
+	margin-bottom: 50px;
+	right: 0;
+	bottom: 0;
+	font-size: 10px;
+	font-weight: bold;
+	z-index: 101;
+	color: #dcafad;
+	
+	animation-name: green;
+	animation-duration: 1.7s;
+}
+
 .banner-area img {
 	position: absolute;
 	max-width: 33%;
