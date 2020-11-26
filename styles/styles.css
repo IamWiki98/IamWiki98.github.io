@@ -1,4 +1,9 @@
 
+*, *::before, *::after {
+	margin: 0;
+	padding: 0;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -26,8 +31,8 @@ body {
 }
 
 .nav-scrolled {
-	background-color: #000000;
-	box-shadow: 0 0 15px 0 #000000;
+	background-color: #0b0c10;
+	box-shadow: 0 0 15px 0 #0b0c10;
 }
 
 .nav {
@@ -40,7 +45,7 @@ body {
 .logo,
 .nav a {
 	margin: 0;
-	color: #dcafad;
+	color: #c5c6c7;
 	text-decoration: none;
 	text-transform: uppercase;
 }
@@ -54,7 +59,7 @@ body {
 }
 
 .nav a:hover {
-	color: #f8f48d;
+	color: #66fcf1;
 }
 
 .nav a::after {
@@ -73,7 +78,7 @@ body {
 
 .nav a:hover::after {
 	transform: scaleX(1);
-	color: #f8f48d;
+	color: #66fcf1;
 }
 
 .logo {
@@ -90,7 +95,7 @@ body {
 	width: 100%;
 	display: flex;
 	height: 80vh;
-	background-color: #000000;
+	background-color: #0b0c10;
 	padding-bottom: 200px;
 }
 
@@ -99,11 +104,11 @@ body {
 	text-align: center;
 	left: 0;
 	right: 0;
-	margin: 600px auto;
+	margin: 500px auto;
 	font-size: 50px;
 	font-weight: bold;
 	z-index: 100;
-	color: #dcafad;
+	color: #c5c6c7;
 	letter-spacing: 2px;
 	
 	animation-name: green;
@@ -138,6 +143,7 @@ body {
 
 .banner-red {
 	left: 0;
+	padding-left: 6%;
 	z-index: 1;
 	animation-name: red;
 	animation-duration: 1.7s;
@@ -168,6 +174,7 @@ body {
 
 .banner-blue {
 	right: 0;
+	padding-right: 6%;
 	animation-name: blue;
 	animation-duration: 1.7s;
 }
@@ -184,38 +191,43 @@ body {
 
 .mywork-area, .aboutme-area, .contact-area {
 	position: relative;
-	display: flex;
 	justify-content: space-around;
-	align-items: center;
-	//text-align: left;
 	flex-wrap: wrap;
 	flex-direction: row;
 	height: 700px;
 }
 
 .mywork-area, .contact-area { background-color: #1f2833; }
-.aboutme-area { background-color: #000000; }
+.aboutme-area { background-color: #0b0c10; }
 
-.aboutme-area a {
-	-webkit-appearance: button;
-	position: absolute;
-	align-items: center;
-	bottom: 100px;
-	outline: 3px solid #f8f48d;
-	color: #f8f48d;
-	padding: 10px;
-	font-size: 30px;
-	text-decoration: none;
-	transition: background-color 1s, color 0.5s;
+.projects-grid {
+	display: grid;
+	padding: 0 20%;
 }
 
-.aboutme-area a:hover {
-	background-color: #f8f48d;
-	color: #000000;
+.projects-grid-item {
+	
+}
+
+.project1 {
+	
+}
+
+.gauntlet {
+	
+}
+
+.raytracer {
+	
+}
+
+.trashturf {
+	
 }
 
 .text-part {
-	width: 65%;
-	height: 80%;
-	color: #dcafad;
+	position: relative;
+	padding: 3% 20%;
+	text-align: left;
+	color: #c5c6c7;
 }
