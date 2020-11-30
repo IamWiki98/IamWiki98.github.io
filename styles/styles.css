@@ -202,34 +202,61 @@ body {
 .projects-grid {
 	display: grid;
 	padding: 0 20%;
-	grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+	justify-content: center;
+	grid-template-columns: repeat(auto-fill, 20rem);
+	grid-auto-rows: 500px;
 	grid-gap: 2.5rem;
 	padding-bottom: 5%;
 }
 
 .projects-grid-item {
 	min-height: 100px;
-    padding: 200px 100px;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 1;
 }
 
-.project1 {
-	background-color: white;
+.projects-grid-item {	
+	border-radius: 25px;
+	cursor: pointer;
+	-webkit-transition: all .7s;
+	transition: 0.7s;
+}
+
+.projects-grid-item:hover {
+	transform: scale(1.1);
+	z-index: 100;
+}
+
+.warfair {
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/WarFair.png) no-repeat;
+	background-size: 330%;
+	background-position: right -500px bottom 50%;
+	height: 100%;
+	padding: 0;
 }
 
 .gauntlet {
-	background-color: red;
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/Gauntlet.png) no-repeat;
+	background-size: 300%;
+	background-position: right -315px bottom 50%;
+	height: 100%;
+	padding: 0;
 }
 
 .raytracer {
-	background-color: blue;
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/RayTracer.png) 50% no-repeat;
+	background-size: 170%;
+	height: 100%;
+	padding: 0;
 }
 
 .trashturf {
-	background-color: yellow;
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/TrashTurf.jpg) no-repeat;
+	background-size: 260%;
+	height: 100%;
+	padding: 0;
 }
 
 .text-part {
