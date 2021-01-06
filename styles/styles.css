@@ -209,7 +209,15 @@ body::after{
 }
 
 .mywork-area, .contact-area { background-color: #1f2833; }
-.aboutme-area { background-color: #0c0c11; }
+.aboutme-area { background-color: #0c0c11; display: inline-block; }
+
+.aboutme-area img {
+	margin-left: 300px;
+	padding-top: 20px;
+	padding-right: 70px;
+	width: 331px; 
+	height: 600px; 
+}
 
 .projects-grid {
 	display: grid;
