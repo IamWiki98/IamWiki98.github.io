@@ -292,14 +292,75 @@ body::after{
 	color: var(--gray);
 }
 
-.contact-area { height: 200px; }
+.contact-area { 
+	display: flex;
+	height: 400px;
+}
+
+.contact-area::after {
+	content: "";
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background: var(--gray);
+	transform: scaleY(0.7);
+}
+
+.contact-info {
+	position: relative;
+	display: block;
+	width: 50%;
+	margin: auto 0;
+	
+}
+
+.contact-info ul {
+	position: absolute;
+	top: 50%;
+	left: 25%;
+	padding: 0;
+	margin: 0;
+	transform: translate(0%, -50%);
+}
+
+.contact-info ul li {
+	display: flex;
+	list-style: none;
+	padding: 0;
+	height: 60px;
+	padding: 25px 0;
+	align-items: center;
+}
+
+.contact-info ul li i {
+	float: left;
+	font-size: 60px;
+	width: 60px;
+	padding-right: 30px;
+}
+
+.contact-info ul li .fa-map-marker-alt {
+	transform: translate(10%, 0%);
+}
+
+.contact-info ul li span {
+	color: var(--gray);
+	line-height: 20px;
+	
+}
+
+.social-menu {
+	position: relative;
+	display: block;
+	width: 50%;
+	margin: auto 0;
+}
 
 .social-menu ul {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	padding: 0;
-	margin: 0;
 	transform: translate(-50%, -50%);
 	display: flex;
 }
