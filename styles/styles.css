@@ -337,6 +337,7 @@ body::after{
 	font-size: 60px;
 	width: 60px;
 	padding-right: 30px;
+	color: var(--black);
 }
 
 .contact-info ul li .fa-map-marker-alt {
