@@ -23,18 +23,6 @@ body {
 	width: 100%;
 }
 
-body::after{
-   position:absolute; width:0; height:0; overflow:hidden; z-index:-1; // hide images
-   content: 
-   url(../images/BannerBlueTransparent.png) 
-   url(../images/BannerGreen.png) 
-   url(../images/BannerRedTransparent.png) 
-   url(../images/WarFair.png) 
-   url(../images/Gauntlet.png) 
-   url(../images/RayTracer.png) 
-   url(../images/TrashTurf.jpg); // load images
-}
-
 .loader {
     position: fixed;
     left: 0px;
