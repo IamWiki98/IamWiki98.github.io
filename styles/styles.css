@@ -35,6 +35,16 @@ body::after{
    url(../images/TrashTurf.jpg); // load images
 }
 
+.loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url('https://lkp.dispendik.surabaya.go.id/assets/loading.gif') 50% 50% no-repeat var(--black);
+}
+
 .navbar {
 	position: fixed;
 	display: flex;
