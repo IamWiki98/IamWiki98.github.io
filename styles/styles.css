@@ -418,3 +418,15 @@ body {
 	border-radius: 40%;
 	transform: scale(1.2);
 }
+
+.social-menu ul li:nth-child(1) a:hover {
+	background-color: #3b5999;
+}
+
+.social-menu ul li:nth-child(2) a:hover {
+	background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(3) a:hover {
+	background-color: #171515;
+}
