@@ -12,6 +12,8 @@ html {
 	--black: #0c0c11;
 	--dark-blue: #1f2833;
 	--gray: #c5c6c7;
+	--white: #66fcf1;
+	--mywork-text-color: rgb(239, 236,239);
 }
 
 body {
@@ -43,7 +45,10 @@ body {
 	flex-wrap: wrap;
 	width: 100%;
 	z-index: 999;
-	//
+	
+	background-color: rgba(0, 0, 0, 0.25);
+	
+	transition: 250ms ease-in;
 }
 
 .nav-scrolled {
@@ -75,7 +80,7 @@ body {
 }
 
 .nav a:hover {
-	color: #66fcf1;
+	color: var(--white);
 }
 
 .nav a::after {
@@ -94,7 +99,7 @@ body {
 
 .nav a:hover::after {
 	transform: scaleX(1);
-	color: #66fcf1;
+	color: var(--white);
 }
 
 .logo {
@@ -108,11 +113,27 @@ body {
 
 .banner-area {
 	position: relative;
-	width: 100%;
-	display: flex;
-	height: 80vh;
+	height: 100vh;
 	background-color: var(--black);
-	padding-bottom: 200px;
+}
+
+.banner-area img {
+	width: 100%;
+	height: 100%;
+	float: left;
+    object-fit: cover;
+	object-position: 25% 0;
+	clip-path: 
+    polygon(
+      0% 200px,                 /* top left */
+      200px 0%,                 /* top left */
+      calc(100% - 200px) 0%,    /* top right */
+      100% 200px,               /* top right */
+      100% calc(100% - 200px),  /* bottom right */
+      calc(100% - 200px) 100%,  /* bottom right */
+      200px 100%,               /* bottom left */
+      0 calc(100% - 200px)      /* bottom left */
+    );
 }
 
 .banner-text {
@@ -145,16 +166,6 @@ body {
 	
 	animation-name: green;
 	animation-duration: 1.7s;
-}
-
-.banner-area img {
-	position: absolute;
-	max-width: 33%;
-	margin: auto;
-	top: 0;
-	bottom: 0;
-	transform: translateY(-10%);
-	filter: brightness(125%);
 }
 
 .banner-red {
@@ -261,8 +272,15 @@ body {
 	padding: 0;
 }
 
+.warfair h1 {
+	text-align: center;
+	padding-top: 30px;
+	font-size: 45px;
+	color: var(--mywork-text-color);
+}
+
 .gauntlet {
-	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/Gauntlet.png) no-repeat;
+	background: url(../images/Gauntlet.png) no-repeat;
 	background-size: 300%;
 	background-position: right -315px bottom 50%;
 	height: 100%;
@@ -271,13 +289,22 @@ body {
 
 .raytracer {
 	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/RayTracer.png) 50% no-repeat;
-	background-size: 170%;
+	background-size: 150%;
+	background-position: right -80px bottom 0px;
+	background-color: #000;
 	height: 100%;
 	padding: 0;
 }
 
+.raytracer h1 {
+	text-align: center;
+	padding-top: 30px;
+	font-size: 45px;
+	color: var(--mywork-text-color);
+}
+
 .trashturf {
-	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/TrashTurf.jpg) no-repeat;
+	background: url(../images/TrashTurf.jpg) no-repeat;
 	background-size: 260%;
 	height: 100%;
 	padding: 0;
