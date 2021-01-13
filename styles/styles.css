@@ -259,7 +259,7 @@ body {
 .banner-left a {
 	position: absolute;
 	bottom: 5%;
-	color: hotpink;
+	color: rgb(64,80,111);
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
