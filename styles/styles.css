@@ -237,6 +237,19 @@ body {
 	min-width: 300px;
 }
 
+.polka-pattern {
+	position: absolute;
+	top: 30px;
+	left: 30px;
+	width: 230px;
+	height: 230px;
+	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkIBIwEqmOgT4K/zMwYNpEH6uxBgT1rQYA7GUBCwZtgBYAAAAASUVORK5CYII=
+   ) repeat;
+   opacity: 0.15;
+   
+   filter: invert(1);
+}
+
 .banner-left .box {
 	box-sizing: border-box;
     padding: 150px 10% 10% 15%;
