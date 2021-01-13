@@ -14,6 +14,7 @@ html {
 	--gray: #c5c6c7;
 	--white: #66fcf1;
 	--mywork-text-color: rgb(239, 236,239);
+	--banner-left-width: 25%;
 }
 
 body {
@@ -43,8 +44,9 @@ body {
 	align-items: center;
 	flex-direction: row;
 	flex-wrap: wrap;
-	width: 100%;
 	z-index: 999;
+	right: 0;
+	width: calc(100% - var(--banner-left-width));
 	
 	background-color: rgba(0, 0, 0, 0.25);
 	
@@ -54,27 +56,24 @@ body {
 .nav-scrolled {
 	background-color: var(--black);
 	box-shadow: 0 0 15px 0 var(--black);
+	width: 100%;
 }
 
 .nav {
 	display: flex;
 	justify-content: right;
 	list-style: none;
-	margin-right: 15%;
-}
-
-.logo,
-.nav a {
-	margin: 0;
-	color: var(--gray);
-	text-decoration: none;
-	text-transform: uppercase;
+	margin-right: 200px;
 }
 
 .nav a {
 	padding: 20px 20px;
 	font-weight: bold;
 	position: relative;
+	margin: 0;
+	color: var(--gray);
+	text-decoration: none;
+	text-transform: uppercase;
 	
 	transition: transform 250ms ease-in;
 }
@@ -108,36 +107,68 @@ body {
 
 .logo {
 	flex: 1 1 auto;
-	margin-left: 10%;
+	margin: 0 0 0 8.5%;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-weight: bold;
 	font-size: 35px;
+	
+	color: var(--gray);
+	opacity: 0;
+	text-transform: uppercase;
+	
+	transition: opacity 250ms ease-in;
+}
+
+.nav-scrolled .logo {
+	opacity: 1;
 }
 
 .banner-area {
 	position: relative;
-	height: 100vh;
+	height: 80vh;
 	background-color: var(--black);
+	
+	display: flex;
+}
+
+.banner-left {
+	width: var(--banner-left-width);
+}
+
+.banner-left .box {
+	box-sizing: border-box;
+    padding: 150px 10% 10% 15%;
+	height: 100%;
+}
+
+.banner-left a {
+	position: absolute;
+	bottom: 50px;
+	color: hotpink;
+	text-decoration: none;
+	border-bottom: 1px solid;
+}
+
+.banner-left h2 {	
+	color: var(--gray);
+	font-size: 40px;
+	
+	padding-bottom: 10px;
+}
+
+.banner-left p {	
+	color: var(--gray);
 }
 
 .banner-area img {
-	width: 100%;
+	width: calc(100% - var(--banner-left-width));
 	height: 100%;
-	float: left;
+	float: right;
     object-fit: cover;
 	object-position: 25% 0;
 	clip-path: 
-    polygon(
-      0% 200px,                 /* top left */
-      200px 0%,                 /* top left */
-      calc(100% - 200px) 0%,    /* top right */
-      100% 200px,               /* top right */
-      100% calc(100% - 200px),  /* bottom right */
-      calc(100% - 200px) 100%,  /* bottom right */
-      200px 100%,               /* bottom left */
-      0 calc(100% - 200px)      /* bottom left */
-    );
+  
 }
 
 .banner-text {
