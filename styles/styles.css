@@ -239,8 +239,8 @@ body {
 
 .polka-pattern {
 	position: absolute;
-	top: 30px;
-	left: 30px;
+	top: 4%;
+	left: 2%;
 	width: 230px;
 	height: 230px;
 	background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAIElEQVQoU2NkIBIwEqmOgT4K/zMwYNpEH6uxBgT1rQYA7GUBCwZtgBYAAAAASUVORK5CYII=
@@ -252,13 +252,13 @@ body {
 
 .banner-left .box {
 	box-sizing: border-box;
-    padding: 150px 10% 10% 15%;
+    padding: 30% 10% 10% 15%;
 	height: 100%;
 }
 
 .banner-left a {
 	position: absolute;
-	bottom: 50px;
+	bottom: 5%;
 	color: hotpink;
 	text-decoration: none;
 	border-bottom: 1px solid;
@@ -284,6 +284,13 @@ body {
   
 }
 
+@media screen and (max-width: 1000px)
+{
+	.banner-left .box {
+		padding-top: 20%;
+	}
+}
+
 @media screen and (max-width: 600px)
 {
 	.banner-left {
@@ -292,6 +299,10 @@ body {
 	
 	.banner-area img {
 		width: 0%;
+	}
+	
+	.banner-left .box {
+		padding-top: 10%;
 	}
 }
 
