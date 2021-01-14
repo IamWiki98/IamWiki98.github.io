@@ -443,11 +443,10 @@ body {
 	padding: 0;
 }
 
-.warfair h1 {
-	text-align: center;
-	padding-top: 30px;
-	font-size: 45px;
-	color: var(--mywork-text-color);
+.warfair img {
+	width: 270px;
+	height: 53px;
+	margin: 40px auto 0 auto;
 }
 
 .gauntlet {
@@ -469,7 +468,7 @@ body {
 
 .raytracer h1 {
 	text-align: center;
-	padding-top: 30px;
+	margin-top: 30px;
 	font-size: 45px;
 	color: var(--mywork-text-color);
 }
