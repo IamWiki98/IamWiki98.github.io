@@ -435,6 +435,49 @@ body {
 	z-index: 100;
 }
 
+.projects-grid-item .project-time {
+	position: absolute;
+	color: var(--mywork-text-color);
+	left: 50%;
+	margin-right: -50%;
+	transform: translateX(-50%);
+	top: 100px;
+	font-weight: bold;
+	text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+}
+
+.trashturf .project-time {
+	top: 230px;
+}
+
+.projects-grid-item .project-description {
+	position: absolute;
+	color: var(--mywork-text-color);
+	top: 180px;
+	margin: 0 30px;
+	text-shadow:
+        0.05em 0 black,
+        0 0.05em black,
+        -0.05em 0 black,
+        0 -0.05em black,
+        -0.05em -0.05em black,
+        -0.05em 0.05em black,
+        0.05em -0.05em black,
+        0.05em 0.05em black;
+}
+
+.trashturf .project-description {
+	top: 270px;
+}
+
 .warfair {
 	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/WarFair.png) no-repeat;
 	background-size: 330%;
@@ -449,10 +492,17 @@ body {
 	margin: 40px auto 0 auto;
 }
 
-.gauntlet {
-	background: url(../images/Gauntlet.png) no-repeat;
-	background-size: 300%;
-	background-position: right -315px bottom 50%;
+.sadengine {
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/SadEngine.png) 50% no-repeat;
+	background-size: 60%;
+	background-color: #000;
+	height: 100%;
+	padding: 0;
+}
+
+.trashturf {
+	background: linear-gradient( rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1) ), url(../images/TrashTurf.jpg) no-repeat;
+	background-size: 260%;
 	height: 100%;
 	padding: 0;
 }
@@ -466,16 +516,17 @@ body {
 	padding: 0;
 }
 
-.raytracer h1 {
+.titleless-project h1 {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 45px;
 	color: var(--mywork-text-color);
 }
 
-.trashturf {
-	background: url(../images/TrashTurf.jpg) no-repeat;
-	background-size: 260%;
+.gauntlet {
+	background: url(../images/Gauntlet.png) no-repeat;
+	background-size: 300%;
+	background-position: right -315px bottom 50%;
 	height: 100%;
 	padding: 0;
 }
