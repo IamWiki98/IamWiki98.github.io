@@ -13,7 +13,7 @@ html {
 	--dark-blue: #1f2833;
 	--gray: #c5c6c7;
 	--white: #66fcf1;
-	--mywork-text-color: rgb(239, 236,239);
+	--projects-text-color: rgb(239, 236,239);
 	--banner-left-width: 25%;
 }
 
@@ -259,7 +259,7 @@ body {
 .banner-left a {
 	position: absolute;
 	bottom: 5%;
-	color: rgb(64,80,111);
+	color: rgb(72 121 140);
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
@@ -273,6 +273,7 @@ body {
 
 .banner-left p {	
 	color: var(--gray);
+	width: 90%;
 }
 
 .banner-area img {
@@ -280,7 +281,6 @@ body {
 	height: 100%;
 	float: right;
     object-fit: cover;
-	object-position: 25% 0;
   
 }
 
@@ -387,14 +387,14 @@ body {
 }
 
 
-.mywork-area, .aboutme-area, .contact-area {
+.projects-area, .aboutme-area, .contact-area {
 	position: relative;
 	justify-content: space-around;
 	flex-wrap: wrap;
 	flex-direction: row;
 }
 
-.mywork-area, .contact-area { background-color: var(--dark-blue); }
+.projects-area, .contact-area { background-color: var(--dark-blue); }
 .aboutme-area { background-color: var(--black); display: inline-block; }
 
 .aboutme-area img {
@@ -437,7 +437,7 @@ body {
 
 .projects-grid-item .project-time {
 	position: absolute;
-	color: var(--mywork-text-color);
+	color: var(--projects-text-color);
 	left: 50%;
 	margin-right: -50%;
 	transform: translateX(-50%);
@@ -460,8 +460,10 @@ body {
 
 .projects-grid-item .project-description {
 	position: absolute;
-	color: var(--mywork-text-color);
+	color: var(--projects-text-color);
 	top: 180px;
+	opacity: 0;
+	transition: opacity 250ms ease-in;
 	margin: 0 30px;
 	text-shadow:
         0.05em 0 black,
@@ -474,8 +476,29 @@ body {
         0.05em 0.05em black;
 }
 
+.projects-grid-item:hover .project-description {
+	opacity: 1;
+}
+
 .trashturf .project-description {
-	top: 270px;
+	top: 260px;
+}
+
+.details-button {
+	position: absolute;
+	padding: 8px 15px;
+	bottom: 20px;
+	border-radius: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: rgba(255, 165, 0, 1);
+	transition: background 250ms ease-in;
+	font-weight: bold;
+	color: var(--black);
+}
+
+.details-button:hover {
+	background: rgba(211, 84, 0, 1);
 }
 
 .warfair {
@@ -520,7 +543,7 @@ body {
 	text-align: center;
 	margin-top: 30px;
 	font-size: 45px;
-	color: var(--mywork-text-color);
+	color: var(--projects-text-color);
 }
 
 .gauntlet {
