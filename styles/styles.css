@@ -598,7 +598,7 @@ body {
 
 .social-menu {
 	position: relative;
-	display: block;
+	display: block !important;
 	width: 50%;
 	margin: auto 0;
 }
