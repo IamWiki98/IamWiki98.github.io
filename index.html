@@ -8,9 +8,19 @@
 	<link rel="stylesheet" href="styles/styles.css">
 	<script src="https://kit.fontawesome.com/465502d23c.js" crossorigin="anonymous"></script>
 	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+	
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF22W3DH5D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-PF22W3DH5D');
+	</script>
 </head>
 <body>
-	<div class="loader"></div>
 	<div class="navbar">
 		<p class="logo">Viktor.</p>
 		<div class="nav">
@@ -30,18 +40,18 @@
 			<div class="polka-pattern"></div>
 			<div class="box">
 				
-				<h2>Viktor Vasilev</h2>
+				<h2 data-aos="fade-right" data-aos-delay="500">Viktor Vasilev</h2>
 				<p>
-				Game Programmer<br/>
+				<span data-aos="fade-right" data-aos-delay="1500">Game Programmer<br/>
 				<br/>
 				Currently studying at:<br/>
-				Breda University of Applied Sciences
+				Breda University of Applied Sciences</span>
 				<br/>
 				<br/>
+				<span data-aos="fade-right" data-aos-delay="2500">
 				My team of 24 members and I are developing a multiplayer online game, with Unreal Engine 4, called <b>Last Resort</b>!
 				In this project, I participate as a <b>Generalist Programmer</b>. My main purpose is to track which tasks fall behind on schedule and help with them.
-				</p>
-			
+				</p></span>
 				<a href="mailto:wiki.wasilew98@gmail.com">
 					wiki.wasilew98@gmail.com
 				</a>
@@ -51,7 +61,7 @@
 	</div>
 	
 	<div class="projects-area" id="projects">
-		<h1 class="text-part">Projects</h1>
+		<h1 class="text-part">My projects at Breda University</h1>
 		<div class="projects-grid">
 			<div class="projects-grid-item warfair">
 				<img src="images/WarFair_Title.png">
@@ -152,12 +162,12 @@
 	<img src="images/ViktorProfilePicTransparent.png" align="left"/>
 		<div class="text-part">
 			<h1>About Me</h1>
-			<p>Hello! I am Viktor. I have had a strong interest in Mathematics from a young age. After studying in a Mathematics Highschool, I found myself enthused by what is called Game Programming!
-			My journey as a programmer started by beginning my studies at <b>Breda University of Applied Sciences</b>. There, I was a part of the <b>International Game Architecture and Design (IGAD)</b> program.
-			I found myself surrounded by experienced game developers (producers, designers, artists, and programmers) who taught me how to achieve my goals. My education at BUas began by developing my C++ skills.
+			<p>Hello, my name is Viktor. From a young age I have had a strong interest in Mathematics. After studying in Mathematics focused high school, I found myself enthused by Game Programming!
+			My journey as a programmer began with my studies at <b>Breda University of Applied Sciences</b>. There, I was a part of the <b>International Game Architecture and Design (IGAD)</b> program.
+			I spend time surrounded by experienced game developers (producers, designers, artists, and programmers) who taught me how to achieve my goals. My education at BUas began by developing my C++ skills.
 			Later on, I worked with multiple multidisciplinary teams using Unreal Engine 4, Unity, and Godot or building engines with other programmers. <br/><br/>
-			Apart from Game Development, I regularly play musical instruments such as a guitar or piano. I view myself as an outgoing person as I tend to smile and laugh a lot around people.
-			I try to maintain a healthy lifestyle by exercising outside. I enjoy playing video games, and I also love going out on adventures with friends.</p>
+			Apart from Game Development, I regularly play guitar or piano. I view myself as an outgoing person as I tend to smile and laugh a lot around people.
+			I try to maintain a healthy lifestyle by exercising outside. I enjoy playing video games, and I also love going on adventures with friends.</p>
 		</div>
 	</div>
 	<div class="contact-area" id="contact">
@@ -188,10 +198,13 @@
 			</ul>
 		</div>
 	</div>
-	<script src="scripts/LoadingScreen.js"></script>
 	<script src="scripts/NavChangeOnScroll.js"></script>
 	<script src="scripts/NavLinkOnClick.js"></script>
 	<script src="scripts/NavLinkActive.js"></script>
 	<script src="scripts/BurgerClick.js"></script>
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>
