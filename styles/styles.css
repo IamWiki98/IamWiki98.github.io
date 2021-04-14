@@ -15,6 +15,7 @@ html {
 	--white: #66fcf1;
 	--projects-text-color: rgb(239, 236,239);
 	--banner-left-width: 25%;
+	--link-color: rgb(72 121 140);
 }
 
 @media screen and (max-width: 1200px)
@@ -249,7 +250,7 @@ body {
 .banner-left a {
 	position: absolute;
 	bottom: 5%;
-	color: rgb(72 121 140);
+	color: var(--link-color);
 	text-decoration: none;
 	border-bottom: 1px solid;
 }
@@ -327,53 +328,6 @@ body {
 	
 	animation-name: green;
 	animation-duration: 1.7s;
-}
-
-.banner-red {
-	left: 0;
-	padding-left: 6%;
-	z-index: 1;
-	animation-name: red;
-	animation-duration: 1.7s;
-}
-
-@keyframes red {
-	from {
-		opacity: 0;
-		margin-left: -700px;}
-	to {
-		opacity: 1;
-		margin-left: 0px;}
-}
-
-.banner-green {
-	left: 0;
-	right: 0;
-	margin-left: auto;
-	margin-right: auto;
-	animation-name: green;
-	animation-duration: 1.7s;
-}
-
-@keyframes green {
-	from {opacity: 0;}
-	to {opacity: 1;}
-}
-
-.banner-blue {
-	right: 0;
-	padding-right: 6%;
-	animation-name: blue;
-	animation-duration: 1.7s;
-}
-
-@keyframes blue {
-	from {
-		opacity: 0;
-		margin-right: -700px;}
-	to {
-		opacity: 1;
-		margin-right: 0px;}
 }
 
 .projects-area .text-part {
@@ -488,6 +442,7 @@ body {
 	transition: background 250ms ease-in;
 	font-weight: bold;
 	color: var(--black);
+	text-decoration: none;
 }
 
 .details-button:hover {

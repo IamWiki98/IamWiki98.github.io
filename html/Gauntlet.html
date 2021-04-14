@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF22W3DH5D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-PF22W3DH5D');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>WarFair</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<script src="https://kit.fontawesome.com/465502d23c.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+	<div class="first">
+		<a href="../index.html"><i class="back-button fas fa-arrow-left"></i></a>
+		<div class="text">
+			<h1>Gauntlet</h1>
+			<p>After entering Breda University of Applied Sciences, my first assigned project was to recreate an old game, called 
+			<a href="https://en.wikipedia.org/wiki/Gauntlet_(1985_video_game)">Gauntlet</a>, in 6 weeks. I was provided with a C++ framework which had an implemented game loop 
+			and a 2D renderer using OpenGL. At that point, I had no idea how to create a project which used proper CPU/GPU synchronization and delta time. I was mostly 
+			experimenting by using the functions provided with the framework.</p>
+			<br/>
+			<h2>Tasks</h2>
+			<ul class="tasks">
+				<li class="done">Create a grid that can use a text file to define where walls and enemy spawners will be.</li>
+				<li class="done">Make player movement and shooting with calculated 'grid collision'.</li>
+				<li class="done">Make melee and ranged enemies.</li>
+				<li class="canceled">Add enemy ranged attacks over walls</li>
+				<li class="canceled">Make enemies use A* pathfinding.</li>
+				<li class="done">Add treasures, keys, and doors.</li>
+				<li class="done">Make copies of the first 10 original levels.</li>
+				<li class="done">Add Menu and UI for the game.</li>
+			</ul>
+		</div>
+	</div>
+	<div class="second">
+		<div class="text">
+			<p>Even though I was very unexperienced, I managed to add most of the features in just 6 weeks time. The code is disastrous. There is no following 
+			of programming standards, and I believe no one can read it at this point. I didn't make ranged attacks over the walls since I didn't realize that the 
+			game has such a feature. I also didn't implement pathfinding since I didn't believe I could have achieved such an algorithm with the level of skills 
+			I had. The project wasn't loading the map and the enemies correctly, but I noticed that a week after my assignment had ended. I used multithreading 
+			to create a loading screen and cover the map loading, and I did the same for the enemies spawning. The maps are created literally from my own text files 
+			since I was too afraid to read from any different extension for 2D grid maps. 
+			<br/>
+			<br/>These GIFs demonstrate some of the work I did:
+			<br/>
+			<br/>
+			</p>
+			<div style="display:grid; grid-template-columns: repeat(auto-fill, 340px); grid-auto-rows: 300px; grid-gap: 50px;">
+				<img src="../images/Gauntlet/MapCreation.gif" style="width: 368px; height: 268px;"/>
+				<img src="../images/Gauntlet/EnemyShoot.gif" style="width: 368px; height: 268px;"/>
+				<img src="../images/Gauntlet/EnemyFeatures.gif" style="width: 368px; height: 268px;"/>
+			</div>
+		</div>
+	</div>
+	<div class="third">
+		<div class="text">
+			<p>The following video shows how the game looked in the end. Only the first two levels had enemy spawners in them and I just added the maps for the other levels. 
+			I also added more features like exploding potions which killed all the enemies currently on the screen.</p>
+			<br/>
+			<div style="text-align: center;">
+			<video style="width: 80%;"  controls>
+				<source src="../videos/GauntletTrailer.mp4" type="video/mp4">
+				Your browser does not support HTML video.
+			</video>
+			</div>
+		</div>
+	</div>
+
+	<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+</html>
