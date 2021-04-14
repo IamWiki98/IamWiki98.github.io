@@ -1,23 +1,104 @@
 <!doctype html>
 <html lang="en">
 <head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF22W3DH5D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-PF22W3DH5D');
+	</script>
+
 	<meta charset="UTF-8">
-	<title>Portfolio</title>
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>TrashTurf</title>
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
-	<link rel="stylesheet" href="../styles/styles.css">
+	<link rel="stylesheet" href="../styles/projectstyles.css">
+	<script src="https://kit.fontawesome.com/465502d23c.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-	<div class="navbar">
-		<p class="logo">Portfolio.</a>
-		<div class="nav">
-			<a href="../index.html#home">Home</a>
-			<a href="../index.html#about">About</a>
-			<a href="../index.html#portfolio">Portfolio</a>
-			<a href="../index.html#contact">Contact</a>
+	<a href="../index.html"><i class="back-button fas fa-arrow-left"></i></a>
+	<div class="first">
+		<div class="text">
+			<h1 style="display: inline; margin-right: 30px">Trash Turf</h1><a href="https://drive.google.com/file/d/1ZOLfAJAL3qsQMjYpfb4IC7hVFgunrquZ/view?usp=sharing" class="download-button" style="position: relative; top: -10px;">Download</a>
+			<p>This game was my fourth project at Breda University of Applied Sciences. I was assigned in Team 18 which consisted of 9 people. The team had 3 designers,
+			3 artists, and 3 programmers(me included). Three people of the team had designed the idea for the game before we were all assigned to it. I wasn't one of them so 
+			I joined later and I had 6 weeks to make a game using Unreal Engine 4. The game included physics, and a lot of camera play. I programmed 80% of the game as one of 
+			our programmers was mostly missing due to personal reasons and the other one was helping me with whatever I needed.
+			<br/>
+			<br/>
+			<h2>Tasks</h2>
+			<div class="flex-track" style="display: flex; justify-content: space-between;">
+			<ul class="tasks">
+				<li class="done">Spawn players for multiple controllers.</li>
+				<li class="done">Make camera follow multiple players smoothly.</li>
+				<li class="done">Make the raccoons be able to attack with their trash bags.</li>
+				<li class="done">Add centrifugal force from the bag to the raccoon, depending on the size of the bag.</li>
+				<li class="done">Add trash bag swinging, dependent on the strength of the raccoon.</li>
+				<li class="done">Make players die when outside of camera vision.</li>
+				<li class="done">Add UI for the menu.</li>
+				<li class="done">Add visual effects for raccons getting hit or dying.</li>
+			</ul>
+			<img src="../images/TrashTurf/Team18.png" style="float: right; width: 359px; height: 295px; order: 2;" />
+			</div>
 		</div>
 	</div>
-	<div class="banner-area" id="home"></div>
-	
-	
+	<div class="second">
+		<div class="text">
+			<h2>Camera</h2>
+			<img src="../images/TrashTurf/CameraMovement.gif" align="right" style="max-width: 300px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>After I joined Team 18, I didn't know what to work on but I saw the camera as an important asset to the game we wanted to make. Consequently, I directly 
+			assigned myself to implement it. After experimenting with it, I relized that the game should be focused on the middle of the map and on the players at the 
+			same time. I figured I should make my own algorithm which tracks the players' location compared to the map's center location, and from there move the camera 
+			to a new location considering how close the players are to each other.
+			</p>
+			<br/>
+			<h2>Physics</h2>
+			<img src="../images/TrashTurf/RaccoonSwinging.gif" align="right" style="max-width: 300px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>After making raccoons being able to hit each other, the lecturers advised us to implement physics in the game. I have studied physics in highschool so I immediately 
+			got interested and knew how to make the game feel with much better mechanics. I took centrifugal force into consideration since the game is literally raccoons swinging 
+			trash bags around themselves. I didn't research how centrifugal force works but instead created my own way of managing it and it turned out perfect. I then introduced 
+			raccoon strength and implemented the ability to swing the trash bag but using the force it already has applied to it. This means the raccoon can't quickly swing the bag 
+			just by standing still.
+			</p>
+			<br/>
+			<h2>Visual Effects</h2>
+			<img src="../images/TrashTurf/RaccoonExplosion.gif" align="right" style="max-width: 300px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>I helped the artists to make the environnment feel more alive. I made looping clouds in the background. I made objects in front of the scene which move in respect of 
+			the camera so the player can feel as if they are in the scene. The artists wanted all the models to be paper-like. Consequently, I made the characters rotate as if they are 
+			made of paper. Unfortunately, the lecturers didn't like the idea so I removed it. Finally, I made an explosion effect when a raccoon goes out of the screen(dies).
+			</p>
+			<br/>
+			<h2>UI</h2>
+			<div style="display: inline-block;">
+			<img src="../images/TrashTurf/UI.gif" align="right" style="max-width: 300px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>I somehow managed to create the whole menu in one night since an artist pushed me to do it before the game presentation. I was inexperienced with it but I achieved 
+			what is show on the image. The different models are buttons.
+			</div>
+			</p>
+		</div>
+	</div>
+	<div class="first">
+		<div class="text">
+			<p>This was the most enjoyable project to work on. Also, it was my best one when it comes to gameplay. Breda University has events for rewarding different games and 
+			Trash Turf was nominated 4 times which no other game could brag with. Unfortunately, we didn't win any of the nominations but we definitely had an amazing game. Trash Turf 
+			was built in just 6 weeks time and we were with the smallest team. But yet again, the code is disastrous since I wasn't experienced as programmer nor with UE4.
+			</p>
+			<video style="width: 100%; padding-top: 30px;"  controls>
+				<source src="../videos/TrashTurf/Trailer 3.0.mp4" type="video/mp4">
+				Your browser does not support HTML video.
+			</video>
+		</div>
+	</div>
+
+	<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
 </body>
 </html>

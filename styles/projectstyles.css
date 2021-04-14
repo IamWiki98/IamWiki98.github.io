@@ -50,10 +50,6 @@ a {
 	background-color: var(--dark-blue);
 }
 
-.first, .second, .third, .fourth {
-	//height: 600px;
-}
-
 .first h1 {
 	font-size: 50px;
 }
@@ -98,4 +94,18 @@ video:focus {
 	.flex-track {
 		flex-direction: column;
 	}
+}
+
+.download-button {
+	border: 1px solid;
+	padding: 10px 20px;
+	font-size: 25px;
+	font-weight: bold;
+	text-decoration: none;
+	transition: .6s;
+}
+
+.download-button:hover {
+	color: var(--black);
+	background-color: var(--link-color);
 }
