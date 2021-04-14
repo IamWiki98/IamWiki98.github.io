@@ -67,6 +67,7 @@ h2 {
 	padding: 3% 20%;
 	text-align: left;
 	color: var(--gray);
+	min-width: 250px;
 }
 
 .tasks {
@@ -86,4 +87,15 @@ h2 {
 
 video:focus {
 	outline: none;
+}
+
+.flex-track {
+		flex-direction: row;
+}
+
+@media screen and (max-width: 950px)
+{
+	.flex-track {
+		flex-direction: column;
+	}
 }

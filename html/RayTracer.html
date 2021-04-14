@@ -21,10 +21,88 @@
 	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-	<div class="first" style="height: 1000px;">
-		<a href="../index.html"><i class="back-button fas fa-arrow-left"></i></a>
+	<a href="../index.html"><i class="back-button fas fa-arrow-left"></i></a>
+	<div class="first"">
 		<div class="text">
 			<h1>Ray-Tracer</h1>
+			<p>The second project I was assigned to, in Breda University of Applied Sciences, was to create a Ray-Tracer using the CPU. The reason for this assignment 
+			was to learn how to use vector math correctly in games. I had to create my own math library and learn every function in detail since I had to explain them 
+			to my lecturers. Furthermore, I had to learn how plane, sphere, and triangle ray intersection worked. I still had no idea how to create a game loop but I 
+			had to create a Ray-Tracer from scratch and I didn't know what raytracing even meant.
+			</p>
+			<br/>
+			<h2>Tasks</h2>
+			<div class="flex-track" style="display: flex; justify-content: space-between;">
+			<ul class="tasks">
+				<li class="done">Make a math library for vec2, vec3, mat2, mat3, and mat4.</li>
+				<li class="done">Learn how to use SFML.</li>
+				<li class="done">Make ray-plane intersection.</li>
+				<li class="done">Make ray-sphere intersection.</li>
+				<li class="done">Make ray-triangle intersection.</li>
+				<li class="done">Add specular reflection.</li>
+				<li class="done">Add shadow rays.</li>
+				<li class="done">Add reflection and refraction.</li>
+				<li class="done">Include Fresnel Equations.</li>
+				<li class="done">Add Bounding Volume Hierarchy.</li>
+				<li class="done">Test performance using Big O notation.</li>
+				<li class="done">Bonus: Add Soft Shadows.</li>
+				<li class="done">Bonus: Add Ambient Occlusion.</li>
+			</ul>
+			<img src="../images/RayTracer-Main.png" style="float: right; width: 300px; height: 300px; order: 2;" />
+			</div>
+		</div>
+	</div>
+	<div class="second">
+		<div class="text">
+			<h2>Math Library</h2>
+			<p>In the beginning of the project I focused entirely on learning what raytracing meant because I didn't know anything about the algorithm. Unfortunately, 
+			my lecturers wanted fast progress and they made me implement a math library before everything else. The math library needed to include vector math, but also 
+			matrix math, and I had no clue how matrices worked either. I spent time researching how they are used but it was difficult since I wasn't very aware of 
+			how vector math worked, yet. I had to learn dot product and cross product. Then I had to learn how translate/rotate/scale matrices worked. Finally, there was 
+			the 'inverse matrix' which was difficult to learn since you needed to know what a determinant meant beforehand. I implemented the library as quickly as possible 
+			and instead of learning it precisely from the beginning, I learned it by practising while making the Ray-Tracer.</p>
+			<br/>
+			<div style="display: inline-block;">
+			<h2>Ray Intersection</h2>
+			<img src="../images/RayTracer/Objects.PNG" align="right" style="max-width: 200px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>In order to understand how raytracing worked, I watched a complete tutorial for how it is done, and I copied it. Of course, while copying it I experimented 
+			and learned how ray-plane and ray-sphere intersections are done. After learning the algorithms in detail and researching through many other websites, I made 
+			ray-triangle intersection on my own. Since I copied it, my lecturers thought I didn't learn it well enough, but I proved them wrong as I was the only one from the 
+			class who didn't fear explaining how the algorithms worked in front of 40 people.</p>
+			</div>
+			<br/>
+			<br/>
+			<h2>Secondary Rays</h2>
+			<img src="../images/RayTracer/AmbientOcclusion.png" align="right" style="max-width: 200px; min-width: 100px; width: 30%; height: 30%; margin: 0; padding-left: 30px;"/>
+			<p>I implemented shadow rays, reflection rays, refraction rays, ambient occlusion rays, and even rays for light refracted from glass. The shadow rays are just rays 
+			searching for light and lowering the brightness of a pixel if they're intersecting with an object. The reflection and refraction rays are using recursion and algorithms 
+			for calculating the angles in which they should be sent. Additionally, after calculation of those rays, Fresnel Equations is applied so that the reflection/refraction 
+			can be more realistic. The ambient occlusion rays(shown in the picture on the right) are very performance-heavy since they are sent from an intersection point through 
+			random points in a hemisphere. It is the same way for calculating soft shadows since they are multiple shadow rays searching for a light with radius. The rays that make 
+			the light refracted through glass are shown in the picture below, in the smallest sphere. If they weren't applied, the sphere would've been fully black.
+			</p>
+			<img src="../images/RayTracer/LightRefraction.png" style="width: 100%; padding: 20px 0;"/>
+		</div>
+	</div>
+	<div class="third">
+		<div class="text">
+			<h2>BVH and Big O Notation</h2>
+			<p>After the reflection and refraction rays were implemented, the CPU couldn't manage calculating rays for more than 2 shapes on the screen. Consequently, the lecturers 
+			told us about the Big O Notation and how we can make the calculations faster by using acceleration structures. I learned about multiple acceleration structures but I 
+			decided to use 'Bounding Volume Hierarchy'. I needed to learn how to make bounding boxes and how to use the inverse matrix since the boxes I made couldn't rotate. After 
+			implementing the acceleration structure, the Ray-Tracer became a lot faster going from O(n) to O(logn). I tested the performance with 1 million shapes on the screen and I 
+			still had at least 2-3 fps on the CPU. I then implemented multithreading so I can use all the available threads my machine has and I had ~20 fps.
+			</p>
+			<img src="../images/RayTracer/MillionShapes.png" style="width: 100%; padding: 20px 0;"/>
+		</div>
+	</div>
+	<div class="fourth">
+		<div class="text">
+			<h2>Model Loading</h2>
+			<p>After making the ray-triangle intersection, model loading was a very simple addition.
+			</p>
+			<img src="../images/RayTracer/ModelLoading.png" style="width: 100%; padding: 20px 0;"/>
+			<p>This project was one of my best ones at BUAS, even though the code is awful. I learned a lot, and I am happy I can show it in my portfolio.</p>
 		</div>
 	</div>
 
