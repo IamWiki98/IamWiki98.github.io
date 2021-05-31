@@ -450,7 +450,7 @@ body {
 }
 
 .warfair {
-	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/WarFair.png) no-repeat;
+	background: linear-gradient( rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35) ), url(../images/WarFair/WarFair.png) no-repeat;
 	background-size: 330%;
 	background-position: right -500px bottom 50%;
 	height: 100%;

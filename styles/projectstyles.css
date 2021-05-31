@@ -60,10 +60,16 @@ h2 {
 
 .text {
 	position: relative;
-	padding: 3% 20%;
+	padding: 3% 0;
+	margin: 0% 20%;
 	text-align: left;
 	color: var(--gray);
 	min-width: 250px;
+}
+
+@media screen and (max-width: 950px)
+{
+	.text { margin: 0% 5%; }
 }
 
 .tasks {
@@ -89,9 +95,30 @@ video:focus {
 		flex-direction: row;
 }
 
+.flex-track.warfair img {
+	float: right; 
+	width: 608px; 
+	height: 293px; 
+	order: 2;
+}
+
+@media screen and (max-width: 1350px)
+{
+	.flex-track.warfair {
+		flex-direction: column;
+	}
+	
+	.flex-track.warfair img { 
+		max-width:100%; 
+		max-height: 100%; 
+		width: inherit;
+		height: inherit;
+	}
+}
+
 @media screen and (max-width: 950px)
 {
-	.flex-track {
+	.flex-track.trashturf {
 		flex-direction: column;
 	}
 }
