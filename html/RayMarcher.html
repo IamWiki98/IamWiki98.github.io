@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-PF22W3DH5D"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'G-PF22W3DH5D');
+	</script>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="user-scalable=0, width=device-width, initial-scale=1, maximum-scale=1" />
+	<title>Gauntlet</title>
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="stylesheet" href="../styles/projectstyles.css">
+	<script src="https://kit.fontawesome.com/465502d23c.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+</head>
+<body>
+	<div class="first">
+	<div style="min-height: 640px;">
+		<div class="text">
+			<h1>Ray-Marcher</h1>
+			<p>During Year 2 at Breda University of Applied Sciences, I decided to learn the ray-marching algorithm and I implemented shaders 
+			using ShaderToy. The algorithm seems to work as ray-tracing does but is actually completely different. Every shape or visual effect is done entirely 
+			by mathematical algorithms.</p>
+			<br/>
+			<h2>Fluid Tank</h2>
+			<iframe width="100%" height="360"
+			frameborder="0" src="https://www.shadertoy.com/embed/ftf3Rf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<p>This shader is my first experience with Ray-Marching. I was mostly copying code and analyzing it by I am still proud of the result. 
+			There are two sections implemented with different algorithms in a infinite cylinder and the camera is following the curvature of the cylinder.</p>
+		</div>
+		</div>
+	</div>
+	<div class="second">
+		<div class="text">
+			<h2>My first try with Ray-Marching</h2>
+			<iframe style="margin: 0; aspect-ratio: 1 / 1;" width="48%" frameborder="0" src="https://www.shadertoy.com/embed/slf3zX?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<iframe style="float: right; aspect-ratio: 1 / 1;" width="48%" frameborder="0" src="https://www.shadertoy.com/embed/7tXGRf?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<p>I experimented with the techniques I learned from the shaders I analyzed. I created 10+ shaders using different methods I found in ShaderToy. 
+			For the examples above: I create a variety of shapes and rotate them by combining the result in different ways. Ray-Marching 
+			lets you combine shapes to create fluid-like simulations.</p>
+			
+		</div>
+	</div>
+	<div class="first">
+		<div class="text">
+			<h2>Fractions</h2>
+			<h1>Need some time to upload it to ShaderToy</h1>
+			<p>I found how to use fractions in ray-marching and with them, I created infinite 'particles'. At this point, I felt confident enough to create 
+			something unusual by spending more time on a single shader. All the shaders above were implemented in a couple of hours.</p>
+		</div>
+	</div>
+	<div class="second">
+		<div class="text">
+			<h2>My best shader (Warning: This is GPU performance heavy)</h2>
+			<iframe width="100%" height="360" frameborder="0" src="https://www.shadertoy.com/embed/7llGz2?gui=true&t=10&paused=true&muted=false" allowfullscreen></iframe>
+			<p>This shader was implemented by combining different shaders into one. It wasn't as simple as copy/paste. I needed to figure out how they work 
+			in order to implement the same tweaked code in my shader. Finally, the result I achieved looked like a movie scene.</p>
+			
+		</div>
+	</div>
+
+	<script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script> 
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script>
+		AOS.init();
+	</script>
+</body>
+</html>

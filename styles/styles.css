@@ -282,7 +282,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 600px)
+@media screen and (max-width: 700px)
 {
 	.banner-left {
 		width: 100%;
@@ -345,16 +345,23 @@ body {
 .aboutme-area { background-color: var(--black); display: inline-block; }
 
 .aboutme-area img {
-	margin-left: 300px;
+	margin-left: 15%;
 	padding-top: 20px;
 	padding-right: 70px;
 	width: 331px; 
 	height: 600px; 
 }
 
+@media screen and (max-width: 1370px)
+{
+	.aboutme-area img {
+		display: none;
+	}
+}
+
 .projects-grid {
 	display: grid;
-	padding: 0 20%;
+	margin: 0 20%;
 	justify-content: center;
 	grid-template-columns: repeat(auto-fill, 20rem);
 	grid-auto-rows: 500px;
@@ -362,16 +369,15 @@ body {
 	padding-bottom: 5%;
 }
 
-.projects-grid-item {
-	min-height: 100px;
+.projects-grid-item, .projects-grid-item iframe {
+	min-height: 500px;
     position: relative;
     display: flex;
     flex-direction: column;
     z-index: 1;
-}
-
-.projects-grid-item {	
+	
 	border-radius: 25px;
+	border: none;
 	cursor: pointer;
 	-webkit-transition: all .7s;
 	transition: 0.7s;
@@ -502,11 +508,24 @@ body {
 	padding: 0;
 }
 
+.raymarcher {
+	background: url(https://www.shadertoy.com/media/shaders/7ls3R2.jpg) no-repeat;
+	padding: 0;
+	background-position: right -245px bottom 50%;
+	background-color: black;
+}
+
 .text-part {
 	position: relative;
 	padding: 3% 20%;
 	text-align: left;
 	color: var(--gray);
+}
+
+@media screen and (max-width: 1150px)
+{
+	.text-part { padding: 30px 5%; }
+	.projects-grid { margin: 0% 5%; }
 }
 
 .contact-area { 
