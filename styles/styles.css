@@ -18,10 +18,10 @@ html {
 	--link-color: rgb(72 121 140);
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1420px)
 {
 	:root {
-		--banner-left-width: 300px;
+		--banner-left-width: 355px;
 	}
 }
 
@@ -64,7 +64,7 @@ body {
 	margin-right: 200px;
 }
 
-@media screen and (max-width: 1200px)
+@media screen and (max-width: 1210px)
 {
 	.nav {
 		margin-right: 50px;
@@ -134,7 +134,7 @@ body {
 	display: none;
 }
 
-@media screen and (max-width: 1000px)
+@media screen and (max-width: 1050px)
 {	
 	.logo {
 		display: none;
@@ -150,7 +150,7 @@ body {
 	}
 }
 
-@media screen and (max-width: 768px)
+@media screen and (max-width: 800px)
 {
 	body {
 		overflow-x: hidden;
@@ -225,7 +225,23 @@ body {
 
 .banner-left {
 	width: var(--banner-left-width);
-	min-width: 300px;
+}
+
+.resume-button {
+	position: absolute;
+	margin-top: 20px;
+	border: 1px solid;
+	padding: 10px 20px;
+	font-size: 25px;
+	font-weight: bold;
+	color: var(--link-color);
+	text-decoration: none;
+	transition: .6s;
+}
+
+.resume-button:hover {
+	color: var(--black);
+	background-color: var(--link-color);
 }
 
 .polka-pattern {
@@ -247,7 +263,7 @@ body {
 	height: 100%;
 }
 
-.banner-left a {
+.banner-left .mail-link {
 	position: absolute;
 	bottom: 5%;
 	color: var(--link-color);
@@ -289,7 +305,7 @@ body {
 	}
 	
 	.banner-area img {
-		width: 0%;
+		display: none;
 	}
 	
 	.banner-left .box {
