@@ -24,7 +24,7 @@
 	<div class="first">
 		<div class="text">
 			<h1 style="display: inline; margin-right: 30px">WarFair</h1><a href="https://buas.itch.io/warfair" target="_blank" rel="noopener noreferrer" class="download-button" style="position: relative; top: -10px;">Itch.io</a>
-			<p>During my last block of Year 2 at BUAS, I was in a team of 18 people to build the game <b>WarFair</b> in Unity. Due to COVID-19, the project was created online.
+			<p>During my last block of Year 2 at BUAS, I was assigned in a team of 18 people to build the game <b>WarFair</b> in Unity. Due to COVID-19, the project was created online.
 			I was assigned as a graphics programmer, but after we began the project, I quickly realized that there wasn't any work that a graphics programmer could do 
 			in a professional engine such as Unity. Consequently, I decided to help my fellow programmers by implementing the AI in our game on my own. 
 			There was a programmer who was working on the AI already, but he had personal problems which slowed down his progress, so I was forced to work with
@@ -32,7 +32,7 @@
 			<br/>
 			<p>The concept was defined as a third-person, grid & turn-based, tactics game. You control two characters with different statistics. You have 
 			a main objective which you need to achieve by carefully using energy points to go around the grid. Enemies such as scout, watchtower, sniper 
-			and brute, move around the grid and you'll most likely have to kill them in order to continue. They will alert each other of your presence. 
+			and brute, move around the grid, and you'll most likely have to kill them in order to continue. They will alert each other of your presence. 
 			You have to think of ways to assasinate them without exposing your location.</p>
 			<br/>
 			<h2>Tasks</h2>
@@ -58,31 +58,31 @@
 			Consequently, I made them do their actions quicker if they are out of the camera's sight by tracking if they are projected into the camera's FOV and raycast
 			if they are.</p>			
 			<br/>
-			<div style="min-height: 350px">
+			<div style="min-height: 450px">
 			<h2>Enemy field of view</h2>
-			<img src="../images/WarFair/enemyfov.gif" style="max-width:25%; float: right; margin: 0; margin-left: auto; padding-left: 30px;"/>
-			<p>We decided that the game will feel better if the enemies see only certain tiles rather than the are in front of them. Owing to that, we had to simulate 
+			<img src="../images/WarFair/enemyfov.gif" class="feature-image"/>
+			<p>We decided that the game will feel better if the enemies see only certain tiles rather than everything in front of them. Owing to that, we had to simulate 
 			a vision cone onto the tiles. Unfortunately, a simple cone didn't achieve what we desired so we went for a more complex method by researching how our vision works.
-			The result is presented in the GIF on the right. One solution to create that shape is to use an ellipse and a triangle to form it. I implemented it, but because I couldn't 
-			rotate the ellipse I thought of using inverse rotation in the algorithm. I thought of this idea thanks to the ray-tracer I implemented an year before that. In it, I 
+			One solution to simulate human vision is to use an ellipse and a triangle to form it. I implemented it, but because I couldn't 
+			rotate the ellipse I thought of using inverse quaternion in the algorithm. I thought of this idea thanks to the ray-tracer I implemented an year before that. In it, I 
 			used an inverse matrix in order to inverse the transform that should apply to a bounding box and instead use inverse transformation on the rays.</p>
 			<br/>
 			</div>
-			<div style="min-height: 280px">
+			<div style="min-height: 450px">
 			<h2>Enemy pathfinding</h2>
-			<img src="../images/WarFair/runaway.png" style="max-width:25%; float: right; margin: 0; margin-left: auto; padding-left: 30px;"/>
+			<img src="../images/WarFair/runaway.png" class="feature-image"/>
 			<p>Our game included enemies that had to run away from the player. I had to implement Dijkstra’s Algorithm in order to make the enemies find the best tile which the 
 			player wouldn't be able to shoot at. The algorithm checked whether there are obstacles between the player and the tile that would stop the player's attack. Furthermore, 
 			it compared the distance from the player to the tile and how much energy it will cost to get there. By doing so, the enemy could decide which tile is the furthest away 
 			from the player and is behind an obstacle. The image on the right presents where the enemies would've gone if they had to run away from the player(the white lines).</p>
 			</div>
-			<div style="min-height: 270px">
+			<div style="min-height: 450px">
 			<h2>Enemy stances</h2>
-			<img src="../images/WarFair/patrolling.gif" style="max-width:25%; float: right; margin: 0; margin-left: auto; padding-left: 30px;"/>
+			<img src="../images/WarFair/patrolling.gif" class="feature-image"/>
 			<p>The AI used FSM as mentioned above. I implemented different stances such as Idle, Observe, Runaway, Attack, Patrol, etc. I will give an example for how the Patrol stance 
 			was implemented. I used an array of waypoints and made the enemies change their stance to Attack on the condition that they see a player while patrolling. They will 
-			walk to the next waypoint using pathfinding, until they run out of energy. The patrolling will be immediate if the next tile that they are going to step on is not visible 
-			to the camera(considering the height of the enemy).</p>
+			walk to the next waypoint using pathfinding, until they run out of energy that is when they end their turn. The patrolling will be immediate if the next tile that they are 
+			going to step on is not visible to the camera(considering the height of the enemy).</p>
 			</div>
 		</div>
 	</div>

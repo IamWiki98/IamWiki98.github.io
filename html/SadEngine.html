@@ -25,8 +25,9 @@
 		<div class="text">
 			<h1>Sad Engine</h1>
 			<p>During my second year at Breda University of Applied Sciences, I was assigned to work on a custom engine with 9 other programmers. The team consisted of 4 engine, 4 
-			gameplay and 2 graphics programmers. I was a <b>Graphics Programmer</b>. The custom engine, called Such a Disaster, had to be multi-platform and to be build for a specific 
-			game(WarFair). It needed to work on Windows and on PlayStation 4. Consequently, we were provided with the tools to make an application for PS4 but the graphics programmers 
+			gameplay and 2 graphics programmers. I was a assigned as a <b>Graphics Programmer</b>. The custom engine, called Such-a-Disaster, had to be multi-platform and to be built 
+			for a specific game(WarFair). Although the project was doing well graphics-wise, the gameplay part was lacking which is why the engine wasn't used for the development of 
+			WarFair. It needed to work on Windows and on PlayStation 4. Consequently, we were provided with the tools to make an application for PS4 but the graphics programmers 
 			needed to work with two rendering APIs - we chose GNMX and DirectX12.
 			</p>
 			<br/>
@@ -34,7 +35,7 @@
 			<ul class="tasks">
 				<li class="done">Implement an abstract renderer.</li>
 				<li class="canceled">Implement a GNMX renderer.</li>
-				<li class="done">Implement a DX12 renderer.</li>
+				<li class="done">Assist with the DX12 renderer.</li>
 				<li class="done">Implement deferred shading.</li>
 				<li class="done">Add a particle system.</li>
 				<li class="done">Add shadows.</li>
@@ -45,26 +46,25 @@
 	<div class="second">
 		<div class="text">
 			<h2>Abstract Renderer</h2>
-			<p>Me and the other graphics programmer in the team designed an abstract renderer which should've run on both Windows and PS4. We didn't know how PS4 GNMX worked but 
-			we decided to make our abstract renderer very low-level so we can have control of all features supplied by both APIs. Unfortunately, due to Covid-19, our lecturers 
-			told us to not build the project for PS4 because we didn't have access to the PS4 toolkits. We still had an abstract renderer but it used only DirectX12 and half 
-			implemented GNMX, so it didn't have any purpose and we didn't know if it works. It was meaningless but we didn't want to start from the beginning so we continued.
+			<p>With the other graphics programmer, we designed an abstract renderer which should've run on both Windows and PS4. We were not experienced with GMNX(PS4's high-level graphics API). 
+			We wanted our renderer to support the low-level tools that both APIs had, so we spent more time implementing the abstract renderer. Unfortunately, due to Covid-19, our lecturers 
+			told us to not build the project for PS4 because we didn't have access to the PS4 toolkits. The engine still had an abstract renderer but it used only DirectX12 and half 
+			implemented GNMX, so it didn't have any purpose and we didn't know if it works. It was meaningless, but we thought we didn't have enough time to redo the project without it, so we left it.
 			</p>
 			<br/>
 			<h2>Particle System</h2>
-			<img src="../images/SadEngine/ParticleSystem.gif" align="right" style="max-width: 500px; min-width: 100px; width: 50%; height: 50%; margin: 0; padding-left: 30px;"/>
-			<p>Since our engine was being built for a certain game, we could ask the artists about what they want the engine to include. They mentioned animations and particles as 
-			the most important ones. Consequently, the other graphics programmer started working on animations and I started work on particles. I single particle is just a sprite, 
-			so I immediately began implementing a sprite in DX12. I made it using a single vector point and bitwise operations in the vertex shader. Then I analyzed how UE4's 
-			particle systems worked and implemented a system based on their design. I was able to spawn hunderds of sprites which meant I had particles implemented. I needed to 
-			learn how to work with transparent particles and that included blending and depth testing. The particles had to be sorted by the distance to the camera and sent to the 
-			shaders in that specific order. After that final step, I had to make a sprite use a sprite sheet instead of an image. It worked just by offsetting UV coordinates so that 
-			was the easier part. All that was left was to add effects to the particles and the results were awesome!
+			<img src="../images/SadEngine/ParticleSystem.gif" class="feature-image"/>
+			<p>Since our engine was being built for WarFair, we asked artists, assigned in WarFair, about what features they wanted to be implemented. They mentioned animations and particles as 
+			the most important ones. Consequently, the other graphics programmer started working on animations and I started working on particles. In order to make it easier for artists 
+			to use the engine's particle system, I created a system similar to that of Unreal Engine 4. Every particle system has an array of modules that can be dynamically assigned to it. 
+			A module adds an effect on all particles in the particle system. A particle is a sprite which uses a spritesheet. I created the sprites in DX12 and by using bitwise operations in the shaders. 
+			The vertex shader accepts a vertex and makes it into a quad. It also uses UV offsets combined with the lifetime of the particle to create a spritesheet animation. Finally, the particles 
+			had to be Z-ordered so that they can be blended.
 			</p>
 			<br/>
 			<h2>Bloom</h2>
 			<div style="display: inline-block;">
-			<img src="../images/SadEngine/Bloom.gif" align="right" style="max-width: 500px; min-width: 100px; width: 50%; height: 50%; margin: 0; padding-left: 30px;"/>
+			<img src="../images/SadEngine/Bloom.gif" class="feature-image"/>
 			<p>The project had very flat colors so I decided to implement a post-processing effect called Bloom. It uses Gaussian Blur and blurs the brighter pixels making a glowing 
 			effect.
 			</p>
@@ -74,27 +74,27 @@
 	<div class="first">
 		<div class="text">
 			<h2>Shadows</h2>
-			<img src="../images/SadEngine/Shadows.png" align="right" style="max-width: 500px; min-width: 100px; width: 50%; height: 50%; margin: 0; padding-left: 30px;"/>
-			<p>Our project required shadow mapping. To be honest, shadow mapping seemed very complex and that is why I decided to work on particles instead, but then I had more time 
-			and I implemented shadow mapping. Specifically, I implemented shadow mapping for point lights since they were the most complex. In order to implement shadow mapping, you 
-			need to render all the objects with a different view and projection matrix. For point lights, the projection frustum needs to be with a 90 degrees angle so that when you 
-			make 6 frustums around a point, you'll cover all the areas the light can reach. Then a cube map needs to be created and stored but for that I needed to find how to implement 
-			a cube map for depth using DX12 which was difficult considering that one small wrong input could make me wonder around for days. That is exactly what happend as I used LOD 
-			of 1 instead of 0 and the cube map depth data wasn't stored correctly. I also had to use different way of depth testing in the shader which was projection based testing, 
-			instead of distance from camera to point and from point to light. After a week of struggles, I finally figured it out and implemented shadow mapping.
-			</p>
+			<div style="min-height: 300px;">
+			<img src="../images/SadEngine/Shadows.png" class="feature-image"/>
+			<p>I implemented omnidirectional shadows for point lights. I used 6 projection matrices for all directions around a point light. I saved 6 depth buffers and combined them into a 
+			cube depth map in order to ray-sample from it in the fragment shader. This had to be implemented in DirectX12 before doing shader work. I used RenderDoc to debug the buffers used for 
+			shadow mapping. Unfortunately, the cube depth map was saved with values from 0 to 1, which made the implementation far more complicated than it should've been.
+			</div>
 			<br/>
 			<h2>Volumetric Lights</h2>
-			<p>I have had a decent experience with ray-marching using ShaderToy. I thought that making volumetric lights will be something similar. I couldn't achieve satisfying results 
-			by just experimenting with different kind of ray-marching so I decided to do research instead. I found about Mie Scattering and used the algorithm to solve the light scattering 
-			when marching through a ray. The results were very nice!
-			</p>
-			<div style="text-align: center; padding-top: 30px;">
-			<video style="width: 100%;"  controls preload="none" poster="../images/SadEngine/VolumetricLightsThumbnail.png">
+			<div style="min-height: 300px;">
+			<video class="feature-image"  controls preload="none" poster="../images/SadEngine/VolumetricLightsThumbnail.png">
 				<source src="../videos/SadEngine/GodRays.mp4" type="video/mp4">
 				Your browser does not support HTML video.
 			</video>
+			<p>Volumetric lights can be implemented in multiple ways. I researched 2D screen space volumetric lights but the project required to see light scattering by not only looking at the light. 
+			Another way is to march through rays sent from the camera and test if they are shadowed. I am experienced with this method because I've used Ray-Marching before. In order to have better 
+			scattering visuals, I applied the Mie Scattering alogrithm while testing if a point in space is shadowed.
+			</p>
 			</div>
+			
+			
+			
 		</div>
 	</div>
 
