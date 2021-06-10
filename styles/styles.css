@@ -385,6 +385,7 @@ body {
 	min-height: auto;
 	margin-right: auto;
 	margin-left: auto;
+	align-self: flex-start;
 	
 	-webkit-transition: all .7s;
 	transition: 0.7s;
