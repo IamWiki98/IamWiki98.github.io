@@ -382,6 +382,7 @@ body {
 .skill-grid img {
 	box-sizing: border-box;
 	width: 4rem;
+	min-height: auto;
 	margin-right: auto;
 	margin-left: auto;
 	
